@@ -32,18 +32,6 @@ async function jsonPokemonData(num) {
    return await pokemonData.json();
 };
 
-async function matchup(poke1Type1, poke1Type2, poke2Type1, poke2Type2) {
-   // 2 = no effect on first poke
-   // 1 = little effect on first poke
-   // 0 = neutral against first poke
-   //-1 = 2x effective against first poke
-   //-2 = 4x effective against first poke
-
-   if (poke1Type1 == "ground" && poke2Type1 == "water") {
-      return -1;
-   }
-};
-
 async function setTypings(poke1DataJSON, poke2DataJSON) {
    //Get all 4 type elements by their IDs
    var poke1type1 = document.getElementById("poke1Type1");
