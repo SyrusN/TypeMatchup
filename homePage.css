@@ -1,9 +1,11 @@
 .poke {
-   height: 2rem;
+   height: 20rem;
    padding-left: 2rem;
    display: block;
    color: black;
    text-shadow: darkorange 2px 0px 4px;
+   font-family: "handjet";
+   font-size: 1.4rem;
 }
 
 .pokemonList ul li {
@@ -18,9 +20,12 @@
 }
 
 h1 {
+   padding-top: 1rem;
    padding-left: 6rem;
    color: black;
    text-shadow: darkorange 2px 0px 4px;
+   font-family: "orbitron";
+   font-size: 2rem;
 }
 
 .pokeName {
@@ -36,9 +41,20 @@ h1 {
 .outcomeCSS {
    color: black;
    text-shadow: black 0.5px 0px 4px;
+   font-family: "orbitron";
+   font-size: 1.2rem;
 }
 
 .outcomeHeader {
+   display: block;
    color: black;
    text-shadow: #0f0 2px 0px 4px;
+   font-family: "orbitron";
+   font-size: 1.4rem;
+}
+
+.outcomeBlock {
+   display: block;
+   padding-left: 2rem;
+   float: left;
 }
