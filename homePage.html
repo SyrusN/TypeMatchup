@@ -1,24 +1,49 @@
 <html>
 
 <head>
-   <title>Pokemon Matchup</title>
+   <title>Pokémon Matchup</title>
+   <link rel="stylesheet" href="homePage.css">
 </head>
 
 <body>
-   <p>Pokemon 1's name is:
+   <h1>Here are the two opponent Pokémon</h1>
+   <div class="pokemonList">
+      <ul>
+         <li>
+            <div class="poke">
+               <p>Pokémon 1's name is:
 
-   </p>
-   <p id="p1Name"></p>
+               </p>
+               <p id="p1Name" class="pokeName">MissingNo</p>
 
-   <p>Pokemon 2's name is:
-   <p id="p2Name">MissingNo</p>
-   </p>
+               <img id="img1" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/">
+               <p>Pokémon 1's typing is: </p>
+               <p id="poke1Type1" class="typing">???</p>
+               <p id="poke1Type2" class="typing">???</p>
+            </div>
+         </li>
+         <li>
+            <div class="poke">
+               <p>Pokémon 2's name is: </p>
+               <p id="p2Name" class="pokeName">MissingNo</p>
 
-   <br>
-   <p>Outcome of the Battle: </p>
-   <p id="outcome">MissingNo</p>
-   <img id="img1" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/">
-   <img id="img2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/">
+               <img id="img2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/">
+               <p>Pokémon 2's typing is: </p>
+               <p id="poke2Type1" class="typing">???</p>
+               <p id="poke2Type2" class="typing">???</p>
+            </div>
+         </li>
+      </ul>
+   </div>
+
+   <hr>
+
+   <div>
+      <br>
+      <p class="outcomeHeader">Outcome of the Battle: </p>
+      <p id="outcome" class="outcomeCSS">To be implemented...</p>
+   </div>
+
    <script src="/grabPokemonInfo.js" type="module"></script>
 </body>
 

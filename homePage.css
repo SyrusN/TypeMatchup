@@ -1,0 +1,44 @@
+.poke {
+   height: 2rem;
+   padding-left: 2rem;
+   display: block;
+   color: black;
+   text-shadow: darkorange 2px 0px 4px;
+}
+
+.pokemonList ul li {
+   text-decoration: none;
+   list-style-type: none;
+   padding: 2rem;
+   float: left;
+}
+
+.pokemonList {
+   align-self: center;
+}
+
+h1 {
+   padding-left: 6rem;
+   color: black;
+   text-shadow: darkorange 2px 0px 4px;
+}
+
+.pokeName {
+   color: black;
+   text-shadow: aqua 2px 0px 4px;
+}
+
+.typing {
+   color: black;
+   text-shadow: #666 2px 0px 4px;
+}
+
+.outcomeCSS {
+   color: black;
+   text-shadow: black 0.5px 0px 4px;
+}
+
+.outcomeHeader {
+   color: black;
+   text-shadow: #0f0 2px 0px 4px;
+}
