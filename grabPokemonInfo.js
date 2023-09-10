@@ -1,10 +1,10 @@
 import {randomNum, getPokemonData} from './randomizeData.js';
-async function grabInfo() {
+export async function grabInfo() {
    // document.getElementById("p1Name").innerHTML = "get";
    var p1Name = document.getElementById("p1Name");
    var p2Name = document.getElementById("p2Name");
    
-   //generate a random number then get the jsonified pokemon data
+   //generate a random number then get the jsonified pokemon data, 60 and 40 are just a random offset I put
    var randNum1 = randomNum(60);
    var randNum2 = randomNum(40);
    var p1Data = await jsonPokemonData(randNum1);
@@ -18,10 +18,12 @@ async function grabInfo() {
    //Set the images of the Pokémon
    await setImages(randNum1, 1);
    await setImages(randNum2, 2);
+
    
 };
 
 async function setImages(num, pkmNum) {
+   //Change the URL of the image to the pokeapi github for a specific pokemon
    var imageURL = document.querySelector(`#img${pkmNum}`);
    imageURL.getAttribute("src");
    imageURL.setAttribute("src", `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png`);
@@ -54,4 +56,3 @@ async function setTypings(poke1DataJSON, poke2DataJSON) {
       poke2type2.innerHTML = "";
    }
 };
-grabInfo();
