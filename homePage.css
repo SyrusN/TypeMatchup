@@ -55,6 +55,16 @@ h1 {
 
 .outcomeBlock {
    display: block;
-   padding-left: 2rem;
+   padding-left: 5rem;
    float: left;
+}
+
+.noticeBlock {
+   display: block;
+   float: left;
+   color: black;
+   text-shadow: red 0.5px 0px 4px;
+   font-family: "orbitron";
+   padding-left: 5rem;
+   width: 58rem;
 }
