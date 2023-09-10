@@ -10,23 +10,48 @@ export async function compareTypes(type1, type2, type3, type4) {
    // 1 = 2x effective against second poke
    // 2 = 4x effective against second poke
 
-   var secondComparison = false;
    var effectiveness1 = 1;
    var effectiveness2 = 1;
    var effectiveness3 = 1;
    var effectiveness4 = 1;
+   var effectiveness5 = 1;
+   var effectiveness6 = 1;
+   var effectiveness7 = 1;
+   var effectiveness8 = 1;
    var result = 0;
 
-   //TODO: Implement cross comparison and maybe reverse roles 
+   //Cross-compare the first types of the two Pokemon
    effectiveness1 = await compareTypesHelper(type1, type3);
+   effectiveness5 = await compareTypesHelper(type3, type1);
+   
    if (type2 != "" && type4 != "") {
-      secondComparison = true;
+      //Pokemon 1's & 2's type 2 exists
+      //Cross compare both their types
+      effectiveness2 = await compareTypesHelper(type1, type4);
       effectiveness3 = await compareTypesHelper(type2, type4);
-   }
-   if (secondComparison) {
-      result = (effectiveness1 + effectiveness3);
+      effectiveness4 = await compareTypesHelper(type2, type3);
+      effectiveness6 = await compareTypesHelper(type4, type1);
+      effectiveness7 = await compareTypesHelper(type4, type2);
+      effectiveness8 = await compareTypesHelper(type3, type2);
+      result = (effectiveness1 - effectiveness5) + (effectiveness2 - effectiveness6) + (effectiveness3 - effectiveness7) + (effectiveness4 - effectiveness8);
+   } else if (type2 != "" && type4 == "") {
+      //Pokemon 1's type 2 exists, Pokemon 2's doesn't
+      //Cross compare Pokemon 1's two types to Pokemon 2's 1 type
+      effectiveness4 = await compareTypesHelper(type2, type3);
+      effectiveness8 = await compareTypesHelper(type3, type2);
+      result = (effectiveness1 - effectiveness5) + (effectiveness4 - effectiveness8);
+
+   } else if (type2 == "" && type4 != "") {
+      //Pokemon 2's type 2 exists, Pokemon 1's doesn't
+      //Cross compare Pokemon 2's two types to Pokemon 1's 1 type
+      effectiveness2 = await compareTypesHelper(type1, type4);
+      effectiveness6 = await compareTypesHelper(type4, type1);
+      result = (effectiveness1 - effectiveness5) + (effectiveness2 - effectiveness6);
+      
    } else {
-      result = effectiveness1;
+      //Only 1 type assumed for both Pokemon
+      //Cross compare both Pokemon's one type
+      result = (effectiveness1 - effectiveness5);
    }
    return result;
 
