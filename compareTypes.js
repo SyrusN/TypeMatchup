@@ -118,6 +118,7 @@ async function compareTypesHelper(poke1Type, poke2Type) {
 
    //Get the table entry for from the matrix using these coorindates to return the effectiveness value
    var result = typingMatrix[typePositionX][typePositionY];
+   console.log(result);
    return result;
 
    //Method 2
