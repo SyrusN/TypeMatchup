@@ -1,17 +1,20 @@
 .poke {
-   height: 20rem;
+   height: 25rem;
    padding-left: 2rem;
    display: block;
    color: black;
    text-shadow: darkorange 2px 0px 4px;
    font-family: "handjet";
    font-size: 1.4rem;
+   /* border-style: solid; */
+   /* border-radius: 2rem; */
 }
 
 .pokemonList ul li {
    text-decoration: none;
    list-style-type: none;
-   padding: 2rem;
+   padding-top: 0.4rem;
+   padding-left: 2rem;
    float: left;
 }
 
@@ -48,15 +51,20 @@ h1 {
 .outcomeHeader {
    display: block;
    color: black;
+   padding-top: 0.8rem;
    text-shadow: #0f0 2px 0px 4px;
    font-family: "orbitron";
    font-size: 1.4rem;
+   height: 12%;
 }
 
 .outcomeBlock {
    display: block;
    padding-left: 5rem;
    float: left;
+   width: 80%;
+   height: 13%;
+
 }
 
 .noticeBlock {
@@ -65,6 +73,49 @@ h1 {
    color: black;
    text-shadow: red 0.5px 0px 4px;
    font-family: "orbitron";
+   padding-top: 0.8rem;
    padding-left: 5rem;
    width: 58rem;
+}
+
+.buttonStyle {
+   background-color: transparent;
+   box-shadow: darkorange 2px 2px 2px;
+   color: black;
+   border-color: red;
+   cursor: pointer;
+   border-radius: 8%;
+   height: 8%;
+   font-family: "orbitron";
+}
+
+.textBoxStyle {
+   background-color: transparent;
+   box-shadow: darkorange 1.4px 1.4px 1.4px;
+   color: black;
+   position: relative;
+   bottom: 0.1rem;
+   border-color: red;
+   font-family: "orbitron";
+   width: 30%;
+   height: 6.5%;
+}
+
+.randomize {
+   padding-left: 6.5rem;
+}
+
+.randomLabel {
+
+   color: black;
+   text-shadow: darkorange 2px 0px 4px;
+   font-family: "handjet";
+   font-size: 1.4rem;
+}
+
+.randomize .buttonStyle {
+   height: 2rem;
+   position: relative;
+   bottom: 0.1rem;
+   border-radius: 6%;
 }
