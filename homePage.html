@@ -4,14 +4,32 @@
    <title>Pokémon Matchup</title>
    <link rel="stylesheet" href="homePage.css">
    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Orbitron&display=swap" rel="stylesheet">
+   <script src="/runEvaluation.js" type="module"></script>
 </head>
 
 <body>
    <h1>Here are the two opponent Pokémon</h1>
+   <div class="randomize">
+      <!-- <form action="javascript:/runEvaluation.js"> -->
+      <form>
+
+         <label class="randomLabel">Click here to randomize both Pokémon:</label>
+         <input type="submit" value="Randomize" class="buttonStyle" id="buttonRandomize">
+
+         <!-- </form> -->
+   </div>
+
+   <!-- <button class="buttonStyle" onclick="runEvaluation()">Randomize</button> -->
    <div class="pokemonList">
       <ul>
          <li>
             <div class="poke">
+
+               <div>
+                  <label>Enter the name of the first Pokémon:</label>
+                  <input type="text" id="pname1" name="pname" class="textBoxStyle">
+                  <input type="submit" value="Submit" class="buttonStyle" id="enterFirst">
+               </div>
                <p>Pokémon 1's name is:
 
                </p>
@@ -21,10 +39,18 @@
                <p>Pokémon 1's typing is: </p>
                <p id="poke1Type1" class="typing">???</p>
                <p id="poke1Type2" class="typing">???</p>
+
+
             </div>
          </li>
          <li>
             <div class="poke">
+
+               <div>
+                  <label>Enter the name of the second Pokémon:</label>
+                  <input type="text" id="pname2" name="pname" class="textBoxStyle">
+                  <input type="submit" value="Submit" class="buttonStyle" id="enterSecond">
+               </div>
                <p>Pokémon 2's name is: </p>
                <p id="p2Name" class="pokeName">MissingNo</p>
 
@@ -32,22 +58,21 @@
                <p>Pokémon 2's typing is: </p>
                <p id="poke2Type1" class="typing">???</p>
                <p id="poke2Type2" class="typing">???</p>
+
             </div>
          </li>
       </ul>
    </div>
 
    <br>
-   <br>
    <div class="outcomeBlock">
       <p class="outcomeHeader">Outcome of the Battle: </p>
       <p id="outcome" class="outcomeCSS">Determining the outcome...</p>
    </div>
-   <script src="/runEvaluation.js" type="module"></script>
 </body>
 <div class="noticeBlock">
-
-   <p>Note: Pokémon and the Pokémon names are trademarks of Nintendo</p>
+  
+   <p>Note: Pokémon and the Pokémon names are trademarks of Nintendo.</p>
 
 </div>
 

@@ -10,6 +10,11 @@ export async function compareTypes(type1, type2, type3, type4) {
    // 1 = 2x effective against second poke
    // 2 = 4x effective against second poke
 
+   if ((type1 == "" && type2 == "") || (type3 == "" && type4 == "")) {
+      //No second Pokemon to compare to
+      return -10;
+   }
+
    var effectiveness1 = 1;
    var effectiveness2 = 1;
    var effectiveness3 = 1;

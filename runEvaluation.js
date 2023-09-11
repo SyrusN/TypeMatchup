@@ -1,18 +1,27 @@
 import { typesTest } from './typesTest.js';
-import { grabInfo } from './grabPokemonInfo.js';
+import { setRandomInfo } from './grabRandomInfo.js';
 import { compareTypes } from './compareTypes.js';
-export async function runEvaluation() {
-   await grabInfo();
+import { setSpecificInfo } from './grabSpecificPokemon.js';
+async function runRandomEvaluation() {
+   await setRandomInfo();
 
    //For testing the types
    await typesTest();
-   var poke1type1 = document.getElementById("poke1Type1").innerHTML;
-   var poke1type2 = document.getElementById("poke1Type2").innerHTML;
-   var poke2type1 = document.getElementById("poke2Type1").innerHTML;
-   var poke2type2 = document.getElementById("poke2Type2").innerHTML;
+   await compareTypesOutcome();
    
-   var result = await compareTypes(poke1type1, poke1type2, poke2type1, poke2type2);
-   console.log(result);
+};
+async function runEvaluation(pokemon, boxNum) {
+   //boxNum is the text box input to be grabbing input from
+   await setSpecificInfo(pokemon, boxNum);
+   
+   //For testing the types
+   await typesTest();
+   await compareTypesOutcome();
+   
+}
+
+function evaluateResult(result) {
+   //Compare the result for how effective the typing is
    if (result <= -4) {
 
       var outcome = document.getElementById("outcome");
@@ -61,6 +70,35 @@ export async function runEvaluation() {
    } else {
       alert("Error");
    }
-   // console.log("Result: ", result);
+};
+async function compareTypesOutcome() {
+   var poke1type1 = document.getElementById("poke1Type1").innerHTML;
+   var poke1type2 = document.getElementById("poke1Type2").innerHTML;
+   var poke2type1 = document.getElementById("poke2Type1").innerHTML;
+   var poke2type2 = document.getElementById("poke2Type2").innerHTML;
+   
+   var result = await compareTypes(poke1type1, poke1type2, poke2type1, poke2type2);
+   if (result == -10) {
+      alert("Incorrect name entered, make sure you have entered a valid Pokémon name");
+      return;
+   }
+   
+   evaluateResult(result);
 }
-runEvaluation();
+runRandomEvaluation();
+document.getElementById("buttonRandomize").addEventListener("click", function(e) {
+   runRandomEvaluation();
+   e.preventDefault();
+});
+document.getElementById("enterFirst").addEventListener("click", function(e) {
+   //For when the user enters the first Pokemon
+   var name = document.getElementById("pname1").value;
+   runEvaluation(name, 1);
+   e.preventDefault();
+});
+document.getElementById("enterSecond").addEventListener("click", function(e) {
+   //For when the user enters the second Pokemon
+   var name = document.getElementById("pname2").value;
+   runEvaluation(name, 2);
+   e.preventDefault();
+});

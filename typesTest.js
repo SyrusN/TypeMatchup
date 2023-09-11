@@ -11,8 +11,6 @@ export async function typesTest() {
    
    type1 = "fighting";
 
-   var outcome2 = document.getElementById("outcome");
-   // var test2 = compareTypes(type3, type4, type1, type2);
    var test2 = compareTypes(type1, type2, type3, type4);
    console.log("Test2: ", await test2, " Expected: 1");
 }
