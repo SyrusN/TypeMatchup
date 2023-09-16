@@ -119,7 +119,7 @@ async function compareTypesHelper(poke1Type, poke2Type) {
    //Simply get the x and y coordinates from the map
    var typePositionX = typingMap.get(poke1Type);
    var typePositionY = typingMap.get(poke2Type);
-   console.log("X: ", typePositionX, "Y: ", typePositionY);
+   // console.log("X: ", typePositionX, "Y: ", typePositionY);
 
    //Get the table entry for from the matrix using these coorindates to return the effectiveness value
    var result = typingMatrix[typePositionX][typePositionY];
