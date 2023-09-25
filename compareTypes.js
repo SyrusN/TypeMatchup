@@ -1,5 +1,4 @@
 export async function compareTypes(type1, type2, type3, type4) {
-   //TODO: ISSUE IN THIS FILE FOR EXPORTING
    
    //types 1 & 2 -> Pokemon 1
    //types 3 & 4 -> Pokemon 2

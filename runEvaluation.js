@@ -72,11 +72,13 @@ function evaluateResult(result) {
    }
 };
 async function compareTypesOutcome() {
+   //Grab each type
    var poke1type1 = document.getElementById("poke1Type1").innerHTML;
    var poke1type2 = document.getElementById("poke1Type2").innerHTML;
    var poke2type1 = document.getElementById("poke2Type1").innerHTML;
    var poke2type2 = document.getElementById("poke2Type2").innerHTML;
    
+   //Compare the types
    var result = await compareTypes(poke1type1, poke1type2, poke2type1, poke2type2);
    if (result == -10) {
       alert("Incorrect name entered, make sure you have entered a valid Pokémon name");
@@ -87,6 +89,7 @@ async function compareTypesOutcome() {
 }
 runRandomEvaluation();
 document.getElementById("buttonRandomize").addEventListener("click", function(e) {
+   //Upon clicking the randomize button, run a random evaluation
    runRandomEvaluation();
    e.preventDefault();
 });
