@@ -1,25 +1,36 @@
 .poke {
-   height: 25rem;
+   height: 22rem;
    padding-left: 2rem;
    display: block;
    color: black;
    text-shadow: darkorange 2px 0px 4px;
    font-family: "handjet";
    font-size: 1.4rem;
-   /* border-style: solid; */
-   /* border-radius: 2rem; */
+}
+
+.pokeCard {
+   height: 25rem;
+   padding-top: 1.2rem;
+   padding-bottom: 1.2rem;
+   display: block;
+   color: black;
+   border-style: solid;
+   border-radius: 2rem;
+   border-color: darkorange;
+   box-shadow: darkorange 1px 1px 4px 1.4px;
+
 }
 
 .pokemonList ul li {
    text-decoration: none;
    list-style-type: none;
-   padding-top: 0.4rem;
-   padding-left: 2rem;
+   padding-top: 0.2rem;
+   padding-right: 1rem;
    float: left;
 }
 
 .pokemonList {
-   align-self: center;
+   padding-left: 3rem;
 }
 
 h1 {
@@ -28,7 +39,9 @@ h1 {
    color: black;
    text-shadow: darkorange 2px 0px 4px;
    font-family: "orbitron";
-   font-size: 2rem;
+   font-size: 1.8rem;
+   padding-bottom: 0rem;
+   height: 0.8rem;
 }
 
 .pokeName {
@@ -46,12 +59,13 @@ h1 {
    text-shadow: black 0.5px 0px 4px;
    font-family: "orbitron";
    font-size: 1.2rem;
+   padding-bottom: 0.8rem;
 }
 
 .outcomeHeader {
    display: block;
    color: black;
-   padding-top: 0.8rem;
+   /* padding-top: 0.2rem; */
    text-shadow: #0f0 2px 0px 4px;
    font-family: "orbitron";
    font-size: 1.4rem;
@@ -60,10 +74,10 @@ h1 {
 
 .outcomeBlock {
    display: block;
-   padding-left: 5rem;
+   padding-left: 6rem;
    float: left;
    width: 80%;
-   height: 13%;
+   height: 11%;
 
 }
 
@@ -73,9 +87,9 @@ h1 {
    color: black;
    text-shadow: red 0.5px 0px 4px;
    font-family: "orbitron";
-   padding-top: 0.8rem;
-   padding-left: 5rem;
-   width: 58rem;
+   height: 2rem;
+   padding-left: 6.1rem;
+   /* padding-right: 6rem; */
 }
 
 .buttonStyle {
@@ -102,7 +116,10 @@ h1 {
 }
 
 .randomize {
-   padding-left: 6.5rem;
+   padding-left: 6rem;
+   padding-right: 50%;
+   float: left;
+   padding-top: 0.4rem;
 }
 
 .randomLabel {
