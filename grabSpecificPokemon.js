@@ -5,9 +5,6 @@ export async function setSpecificInfo(pokemonName, slotNum) {
   
    var pData = await jsonPokemonData(pokemonName);
    var pNum = pData.id;
-   if (pNum == "") {
-      alert("Not valid.");
-   }
 
    //Set the names of the Pokémon
    pName.innerHTML = pData.name;
