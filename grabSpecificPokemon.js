@@ -1,4 +1,4 @@
-import {setImage, jsonPokemonData, setTypings} from "/TypeMatchup/setData.js";
+import {setImage, jsonPokemonData, setTypings} from "/setData.js";
 export async function setSpecificInfo(pokemonName, slotNum) {
    //Get the pokemon name for a given slot number
    var pName = document.getElementById(`p${slotNum}Name`);

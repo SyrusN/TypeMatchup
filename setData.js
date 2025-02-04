@@ -1,4 +1,4 @@
-import { getPokemonData} from './TypeMatchup/grabData.js';
+import { getPokemonData} from './grabData.js';
 export async function setImage(num, pkmNum) {
    //Change the URL of the image to the pokeapi github for a specific pokemon
    var imageURL = document.querySelector(`#img${pkmNum}`);

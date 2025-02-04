@@ -1,4 +1,4 @@
-import { compareTypes } from './TypeMatchup/compareTypes.js';
+import { compareTypes } from './compareTypes.js';
 export async function typesTest() {
    //Test the different pokemon types
    var type1 = "normal";
