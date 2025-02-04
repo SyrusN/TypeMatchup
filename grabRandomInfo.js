@@ -1,4 +1,4 @@
-import {setImage, jsonPokemonData, setTypings} from "/setData.js";
+import {setImage, jsonPokemonData, setTypings} from "/TypeMatchup/setData.js";
 export async function setRandomInfo() {
    var p1Name = document.getElementById("p1Name");
    var p2Name = document.getElementById("p2Name");
