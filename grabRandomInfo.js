@@ -23,8 +23,8 @@ export async function setRandomInfo() {
    
 };
 function randomNum(changeVariable) {
-   //1010 number of current pokemon, so do one more than that to get all pokemon included
-   let randomNum = Math.floor(Date.now() * changeVariable % 1011);
+   //1025 number of current pokemon, so do one more than that to get all pokemon included
+   let randomNum = Math.floor((Date.now() + 1) * changeVariable % 1026);
    return randomNum;
 };
 
