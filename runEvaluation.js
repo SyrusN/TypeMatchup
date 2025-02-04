@@ -1,12 +1,12 @@
-import { typesTest } from './typesTest.js';
-import { setRandomInfo } from './grabRandomInfo.js';
-import { compareTypes } from './compareTypes.js';
-import { setSpecificInfo } from './grabSpecificPokemon.js';
+import { typesTest } from './TypeMatchup/typesTest.js';
+import { setRandomInfo } from './TypeMatchup/grabRandomInfo.js';
+import { compareTypes } from './TypeMatchup/compareTypes.js';
+import { setSpecificInfo } from './TypeMatchup/grabSpecificPokemon.js';
 async function runRandomEvaluation() {
    await setRandomInfo();
 
    //For testing the types
-   await typesTest();
+   // await typesTest();
    await compareTypesOutcome();
    
 };
